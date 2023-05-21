@@ -1,0 +1,729 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20231.23.0310.1044                               -->
+<workbook original-version='18.1' source-build='2023.1.0 (20231.23.0310.1044)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='final_df' inline='true' name='federated.0f6qi181mjijmz11tt6r417q2vms' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='final_df' name='textscan.09fgad01nf1g9n1d7bbwg0ecxgf0'>
+            <connection class='textscan' directory='Data/Final_Project_Ironhack' filename='final_df.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.09fgad01nf1g9n1d7bbwg0ecxgf0' name='final_df.csv' table='[final_df#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_DE' separator=','>
+            <column datatype='string' name='sentiment' ordinal='0' />
+            <column datatype='integer' name='topic' ordinal='1' />
+            <column datatype='string' name='document' ordinal='2' />
+            <column datatype='string' name='original label' ordinal='3' />
+            <column datatype='string' name='Topic_words' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.09fgad01nf1g9n1d7bbwg0ecxgf0' name='final_df.csv' table='[final_df#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_DE' separator=','>
+            <column datatype='string' name='sentiment' ordinal='0' />
+            <column datatype='integer' name='topic' ordinal='1' />
+            <column datatype='string' name='document' ordinal='2' />
+            <column datatype='string' name='original label' ordinal='3' />
+            <column datatype='string' name='Topic_words' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[final_df.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;€&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_DE&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sentiment</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[sentiment]</local-name>
+            <parent-name>[final_df.csv]</parent-name>
+            <remote-alias>sentiment</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df.csv_AB5ED11441324187B121AC17B8F1076E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>topic</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[topic]</local-name>
+            <parent-name>[final_df.csv]</parent-name>
+            <remote-alias>topic</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df.csv_AB5ED11441324187B121AC17B8F1076E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>document</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[document]</local-name>
+            <parent-name>[final_df.csv]</parent-name>
+            <remote-alias>document</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df.csv_AB5ED11441324187B121AC17B8F1076E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>original label</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[original label]</local-name>
+            <parent-name>[final_df.csv]</parent-name>
+            <remote-alias>original label</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df.csv_AB5ED11441324187B121AC17B8F1076E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Topic_words</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Topic_words]</local-name>
+            <parent-name>[final_df.csv]</parent-name>
+            <remote-alias>Topic_words</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[final_df.csv_AB5ED11441324187B121AC17B8F1076E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='final_df.csv' datatype='table' name='[__tableau_internal_object_id__].[final_df.csv_AB5ED11441324187B121AC17B8F1076E]' role='measure' type='quantitative' />
+      <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+      <column aggregation='Sum' caption='topic (copy)' datatype='integer' name='[topic (copy)_1021754192573370368]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='[topic]' />
+      </column>
+      <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+      <column-instance column='[topic (copy)_1021754192573370368]' derivation='None' name='[none:topic (copy)_1021754192573370368:ok]' pivot='key' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:sentiment:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Negative&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Positive&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Neutral&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:topic (copy)_1021754192573370368:ok]' palette='blue_teal_10_0' type='palette'>
+            <map to='#2c5985'>
+              <bucket>48</bucket>
+            </map>
+            <map to='#2c5b87'>
+              <bucket>47</bucket>
+            </map>
+            <map to='#2d5e89'>
+              <bucket>46</bucket>
+            </map>
+            <map to='#2d618b'>
+              <bucket>45</bucket>
+            </map>
+            <map to='#2e648e'>
+              <bucket>44</bucket>
+            </map>
+            <map to='#2f6690'>
+              <bucket>43</bucket>
+            </map>
+            <map to='#2f6992'>
+              <bucket>42</bucket>
+            </map>
+            <map to='#306c94'>
+              <bucket>41</bucket>
+            </map>
+            <map to='#316f96'>
+              <bucket>40</bucket>
+            </map>
+            <map to='#317299'>
+              <bucket>39</bucket>
+            </map>
+            <map to='#32769b'>
+              <bucket>38</bucket>
+            </map>
+            <map to='#33799d'>
+              <bucket>37</bucket>
+            </map>
+            <map to='#337c9f'>
+              <bucket>36</bucket>
+            </map>
+            <map to='#347fa1'>
+              <bucket>35</bucket>
+            </map>
+            <map to='#3482a4'>
+              <bucket>34</bucket>
+            </map>
+            <map to='#3485a6'>
+              <bucket>33</bucket>
+            </map>
+            <map to='#3588a8'>
+              <bucket>32</bucket>
+            </map>
+            <map to='#358aaa'>
+              <bucket>31</bucket>
+            </map>
+            <map to='#358dad'>
+              <bucket>30</bucket>
+            </map>
+            <map to='#3790af'>
+              <bucket>29</bucket>
+            </map>
+            <map to='#3994b0'>
+              <bucket>28</bucket>
+            </map>
+            <map to='#3c97b2'>
+              <bucket>27</bucket>
+            </map>
+            <map to='#3e9ab4'>
+              <bucket>26</bucket>
+            </map>
+            <map to='#419db6'>
+              <bucket>25</bucket>
+            </map>
+            <map to='#43a0b8'>
+              <bucket>24</bucket>
+            </map>
+            <map to='#47a3b9'>
+              <bucket>23</bucket>
+            </map>
+            <map to='#4ca6bb'>
+              <bucket>22</bucket>
+            </map>
+            <map to='#52a8bc'>
+              <bucket>21</bucket>
+            </map>
+            <map to='#57abbe'>
+              <bucket>20</bucket>
+            </map>
+            <map to='#5caebf'>
+              <bucket>19</bucket>
+            </map>
+            <map to='#61b1c1'>
+              <bucket>18</bucket>
+            </map>
+            <map to='#66b3c2'>
+              <bucket>17</bucket>
+            </map>
+            <map to='#6bb6c4'>
+              <bucket>16</bucket>
+            </map>
+            <map to='#6fb9c5'>
+              <bucket>15</bucket>
+            </map>
+            <map to='#74bbc6'>
+              <bucket>14</bucket>
+            </map>
+            <map to='#79bec8'>
+              <bucket>13</bucket>
+            </map>
+            <map to='#7dc1c9'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#82c3cb'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#86c6cc'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#8bc8cd'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#8fcbce'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#94cecf'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#99d0d0'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#9dd3d1'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#a2d6d2'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#a7d8d3'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#acdbd4'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#b1ded5'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#b6e1d6'>
+              <bucket>0</bucket>
+            </map>
+            <map to='#bce4d8'>
+              <bucket>-1</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Germany&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='final_df.csv' id='final_df.csv_AB5ED11441324187B121AC17B8F1076E'>
+            <properties context=''>
+              <relation connection='textscan.09fgad01nf1g9n1d7bbwg0ecxgf0' name='final_df.csv' table='[final_df#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_DE' separator=','>
+                  <column datatype='string' name='sentiment' ordinal='0' />
+                  <column datatype='integer' name='topic' ordinal='1' />
+                  <column datatype='string' name='document' ordinal='2' />
+                  <column datatype='string' name='original label' ordinal='3' />
+                  <column datatype='string' name='Topic_words' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Box Plot'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_df' name='federated.0f6qi181mjijmz11tt6r417q2vms' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0f6qi181mjijmz11tt6r417q2vms'>
+            <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[topic (copy)_1021754192573370368]' derivation='None' name='[none:topic (copy)_1021754192573370368:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[topic]' derivation='Count' name='[pcto:cnt:topic:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+            <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='topic (copy)' datatype='integer' name='[topic (copy)_1021754192573370368]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[topic]' />
+            </column>
+            <column datatype='integer' name='[topic]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:topic (copy)_1021754192573370368:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:topic (copy)_1021754192573370368:ok]' member='0' />
+              <groupfilter function='member' level='[none:topic (copy)_1021754192573370368:ok]' member='29' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0f6qi181mjijmz11tt6r417q2vms].[none:topic (copy)_1021754192573370368:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk:1]' field-type='quantitative' max='1.0294268174973571' min='-0.17056640982010851' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]' value='173' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:topic (copy)_1021754192573370368:ok]' />
+            </encodings>
+            <reference-line axis-column='[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk:1]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk:1]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk:1]</rows>
+        <cols>[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]</cols>
+      </table>
+      <simple-id uuid='{AD759294-60D9-4131-8105-E4C6C57E8CB4}' />
+    </worksheet>
+    <worksheet name='Product performance'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='36'>Product performance</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_df' name='federated.0f6qi181mjijmz11tt6r417q2vms' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0f6qi181mjijmz11tt6r417q2vms'>
+            <column datatype='string' name='[Topic_words]' role='dimension' type='nominal' />
+            <column-instance column='[Topic_words]' derivation='None' name='[none:Topic_words:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[topic (copy)_1021754192573370368]' derivation='None' name='[none:topic (copy)_1021754192573370368:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[topic]' derivation='Count' name='[pcto:cnt:topic:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[topic]' derivation='Count' name='[pcto:cnt:topic:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='topic (copy)' datatype='integer' name='[topic (copy)_1021754192573370368]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[topic]' />
+            </column>
+            <column datatype='integer' name='[topic]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]'>
+            <groupfilter function='level-members' level='[none:sentiment:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <natural-sort column='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:topic (copy)_1021754192573370368:ok]' direction='ASC' />
+          <slices>
+            <column>[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk:1]' field-type='quantitative' max='1.8249422375321391' min='-0.019869576430320859' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk:1]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='color' field='[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk]' palette='green_gold_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk]' />
+              <text column='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:Topic_words:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk] / [federated.0f6qi181mjijmz11tt6r417q2vms].[none:topic (copy)_1021754192573370368:ok])</rows>
+        <cols>[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk:1]</cols>
+      </table>
+      <simple-id uuid='{BF5A8DFE-8EDB-43E2-844B-3735D80C0557}' />
+    </worksheet>
+    <worksheet name='Sentiment Rate'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontsize='48'>Customer attitude to products. </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_df' name='federated.0f6qi181mjijmz11tt6r417q2vms' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0f6qi181mjijmz11tt6r417q2vms'>
+            <column-instance column='[topic (copy)_1021754192573370368]' derivation='Count' name='[cnt:topic (copy)_1021754192573370368:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[topic]' derivation='Count' name='[pcto:cnt:topic:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+            <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column-instance column='[topic]' derivation='Sum' name='[sum:topic:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' caption='topic (copy)' datatype='integer' name='[topic (copy)_1021754192573370368]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[topic]' />
+            </column>
+            <column datatype='integer' name='[topic]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk:1]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk:1]' />
+              <color column='[federated.0f6qi181mjijmz11tt6r417q2vms].[sum:topic:qk]' />
+              <text column='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]' />
+              <lod column='[federated.0f6qi181mjijmz11tt6r417q2vms].[cnt:topic (copy)_1021754192573370368:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{336BE720-CC6C-43AE-BF2C-5FD673ED15F9}' />
+    </worksheet>
+    <worksheet name='Topic size visualisation.'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='36'>Topic size visualisation.</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='final_df' name='federated.0f6qi181mjijmz11tt6r417q2vms' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0f6qi181mjijmz11tt6r417q2vms'>
+            <column datatype='string' name='[Topic_words]' role='dimension' type='nominal' />
+            <column-instance column='[sentiment]' derivation='Count' name='[cnt:sentiment:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Topic_words]' derivation='None' name='[none:Topic_words:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[topic (copy)_1021754192573370368]' derivation='None' name='[none:topic (copy)_1021754192573370368:ok]' pivot='key' type='ordinal' />
+            <column datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column aggregation='Sum' caption='topic (copy)' datatype='integer' name='[topic (copy)_1021754192573370368]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='[topic]' />
+            </column>
+            <column datatype='integer' name='[topic]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]'>
+            <groupfilter function='member' level='[none:sentiment:nk]' member='&quot;Negative&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:topic (copy)_1021754192573370368:ok]' />
+              <size column='[federated.0f6qi181mjijmz11tt6r417q2vms].[cnt:sentiment:qk]' />
+              <text column='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:topic (copy)_1021754192573370368:ok]' />
+              <text column='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:Topic_words:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{DCA21080-4229-4565-B4B6-E52CAF3E9C03}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Sentiment Rate'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0f6qi181mjijmz11tt6r417q2vms].[sum:topic:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E1F07441-0F24-46DC-8A3B-134C9C3B1F2F}' />
+    </window>
+    <window class='worksheet' name='Topic size visualisation.'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:topic (copy)_1021754192573370368:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4FC392A0-CB08-4AAB-ADEA-49A19F7E9998}' />
+    </window>
+    <window class='worksheet' name='Box Plot'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:topic (copy)_1021754192573370368:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0EC5D385-4793-46AF-9DBB-0B5024A2B5CD}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Product performance'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0f6qi181mjijmz11tt6r417q2vms].[none:sentiment:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0f6qi181mjijmz11tt6r417q2vms].[pcto:cnt:topic:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CBBC6CD6-E5FD-4668-9448-7180F8FD4764}' />
+    </window>
+  </windows>
+</workbook>
